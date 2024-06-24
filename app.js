@@ -66,10 +66,9 @@ else{
   return ;
 }}
   for(let k=0;k<8;k++){  
-    if(((btn[arr[k][0]].innerText!=btn[arr[k][1]].innerText) && (btn[arr[k][1]].innerText!=btn[arr[k][2]].innerText)&& (btn[arr[k][0]].innerText!=btn[arr[k][2]].innerText)) ){
-    tie.innerText="GAME IS TIE";
-    document.body.prepend(tie);
-    return;
+    if((btn[arr[k][0]].innerText!="x" || btn[arr[k][1]].innerText!="x" || btn[arr[k][2]].innerText!="x" )&&(btn[arr[k][0]].innerText!="o" || btn[arr[k][1]].innerText!="o" || btn[arr[k][2]].innerText!="o")){
+      tie.innerText="GAME IS TIE";
+      document.body.prepend(tie);
   }
   
 }
